@@ -1,0 +1,82 @@
+# Justine Carl Albay
+
+📍 Imus, Cavite, 4103  
+✉️ justinecarlalbay@gmail.com  
+📞 09686710612  
+🔗 [LinkedIn](https://linkedin.com/in/justine-albay/)  
+💻 [GitHub](https://github.com/kirchei)
+
+---
+
+## 🎓 Education
+
+**De La Salle University – Dasmariñas**  
+_Bachelor’s Degree in Information Technology, specialization in Web Development_  
+📍 Dasmariñas, Cavite  
+🗓️ July 2025  
+- Dean’s List 1st Honor: 2021–2025  
+- **Summa Cum Laude**  
+- GPA: **3.84**
+
+**Thesis**:  
+**Development of an Online Green Metrics Management System for DLSU-D’s Campus Sustainability Office**  
+- Awarded **Best in Capstone – DLSU-D Research Week 2025**
+
+**De La Salle University – Dasmariñas Senior High School**  
+📍 Dasmariñas, Cavite  
+🗓️ May 2021  
+- Honor’s List: 2019–2021 (with High and Highest Distinction)  
+- GPA: **3.87**
+
+---
+
+## 💼 Experience
+
+**ODR Technologies Inc.** – *Frontend Developer*  
+📍 Muntinlupa, NCR | Remote  
+🗓️ January 2025 – May 2025  
+- Developed the frontend of a mobile-first EV charging station locator app using **Angular** and **Ionic**
+- Built responsive UI components including interactive maps, dynamic carousels, and filterable station lists
+- Focused on modular code architecture and intuitive UX for enhanced user engagement
+- Collaborated using **GitHub** for version control and code management
+
+**DLSU-D Campus Sustainability Office** – *Full-stack Developer*  
+📍 Dasmariñas, Cavite | Remote  
+🗓️ April 2024 – December 2024  
+- Developed a centralized platform for managing **UI GreenMetric** data submissions and reports
+- Streamlined data collection across 16 offices
+- Designed a **relational database schema** to efficiently store and manage sustainability data
+- Enhanced user experience with a responsive interface using **Material-UI**
+- Collaborated closely with stakeholders to ensure usability and data accuracy
+
+---
+
+## 🧑‍💼 Leadership & Activities
+
+**DLSU-D Information Technology Program Council** – *Internal Public Relations Officer*  
+📍 Dasmariñas, Cavite  
+🗓️ August 2024 – July 2025  
+- Promoted IT program initiatives and events through coordinated **social media campaigns**
+- Acted as liaison between students and faculty, improving communication and event participation
+
+---
+
+## 🛠️ Skills & Interests
+
+**Programming Languages:**  
+JavaScript, TypeScript, PHP, Java, C#, C++, Dart, SQL
+
+**Frameworks & Libraries:**  
+React, Angular, Flutter, Node.js, Next.js, Express.js, Bootstrap, Material-UI, Ionic
+
+**Web & Development Tools:**  
+Git, HTML, CSS, REST APIs
+
+**Database Management:**  
+MySQL, MongoDB
+
+**Design Tools:**  
+Figma, Adobe Photoshop, Adobe Illustrator, Adobe Animate
+
+**Laboratory & Research Tools:**  
+Quantitative data analysis, descriptive research design, system usability testing, survey-based data collection, Excel for data tabulation and analysis, Google Forms for digital surveys

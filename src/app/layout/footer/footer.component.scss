@@ -1,7 +1,8 @@
 @use '../../app.scss' as *;
+@use 'sass:color';
 
 .footer {
-  background: linear-gradient(135deg, darken($background-dark, 5%) 0%, darken($background-light, 5%) 100%);
+  background: linear-gradient(135deg, color.adjust($background-dark, $lightness: -5%) 0%, color.adjust($background-light, $lightness: -5%) 100%);
   padding: 4rem 2rem 2rem;
   position: relative;
 

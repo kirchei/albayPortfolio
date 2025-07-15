@@ -182,8 +182,8 @@ export const portfolioData = {
         'Optimized performance and accessibility',
         'Clean and maintainable code structure'
       ],
-      githubUrl: 'https://github.com/kirchei/portfolio',
-      liveUrl: 'https://justinealbay.com',
+      githubUrl: 'https://github.com/kirchei/albayPortfolio',
+      liveUrl: 'https://kirchei.github.io/albayPortfolio/',
       imageUrl: '/assets/images/projects/portfolio.png'
     },
     {

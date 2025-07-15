@@ -1,0 +1,301 @@
+@use '../../app.scss' as *;
+
+.about {
+  @include section-container;
+  
+  .about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    // Hero Section
+    .hero-section {
+      text-align: center;
+      margin-bottom: 80px;
+
+      .section-tag {
+        @include section-tag;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        @include gradient-text;
+
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        color: $light-text;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    }
+
+    // Profile Section
+    .profile-section {
+      margin-bottom: 100px;
+
+      .profile-content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 60px;
+        align-items: center;
+
+        @media (max-width: 992px) {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .profile-text {
+          .summary {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: $light-text;
+            margin-bottom: 40px;
+          }
+
+          .quick-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+
+            .info-item {
+              .label {
+                display: block;
+                font-size: 0.875rem;
+                color: $light-text;
+                margin-bottom: 8px;
+              }
+
+              .value {
+                font-size: 1rem;
+                color: $dark-text;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .profile-image-container {
+          position: relative;
+          padding-top: 120%;
+          border-radius: 16px;
+          overflow: hidden;
+
+          .profile-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+          }
+
+          .image-backdrop {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, $primary-blue, $accent-purple);
+            opacity: 0.1;
+            border-radius: 16px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    // Section Headers
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $dark-text;
+        white-space: nowrap;
+      }
+
+      .header-line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(to right, rgba($primary-blue, 0.5), rgba($accent-purple, 0.5));
+      }
+    }
+
+    // Education Timeline
+    .education-timeline {
+
+      .timeline {
+        position: relative;
+        padding-left: 40px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 8.25px; // Center the line with the circles
+          top: 8px; // Align with first circle
+          bottom: 8px; // Align with last circle
+          width: 2px;
+          background: linear-gradient(to bottom, $primary-blue, $accent-purple);
+        }
+
+        .timeline-item {
+          position: relative;
+          padding-bottom: 48px;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: $white;
+            border: 2px solid $primary-blue;
+            z-index: 2;
+            box-shadow: 0 0 0 4px rgba($primary-blue, 0.1);
+          }
+
+          .timeline-content {
+            position: relative;
+            padding-top: 4px;
+
+            .time-period {
+              display: inline-block;
+              padding: 6px 16px;
+              background: rgba($primary-blue, 0.1);
+              color: $primary-blue;
+              border-radius: 20px;
+              font-size: 0.875rem;
+              font-weight: 500;
+              margin-bottom: 16px;
+            }
+
+            .institution-card {
+              background: $white;
+              border-radius: 16px;
+              padding: 24px;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+              transition: transform 0.3s ease;
+
+              &:hover {
+                transform: translateY(-4px);
+              }
+
+              h3 {
+                font-size: 1.5rem;
+                color: $dark-text;
+                margin-bottom: 12px;
+                font-weight: 700;
+              }
+
+              .degree {
+                color: $primary-blue;
+                font-weight: 600;
+                margin-bottom: 8px;
+              }
+
+              .specialization {
+                color: $light-text;
+                margin-bottom: 16px;
+              }
+
+              .achievements {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                  position: relative;
+                  padding-left: 24px;
+                  margin-bottom: 12px;
+                  color: $dark-text;
+                  font-size: 0.95rem;
+                  line-height: 1.5;
+
+                  &:before {
+                    content: '•';
+                    position: absolute;
+                    left: 8px;
+                    color: $primary-blue;
+                  }
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Thesis Highlight
+    .thesis-highlight {
+      .thesis-content {
+        .thesis-card {
+          background: linear-gradient(135deg, rgba($primary-blue, 0.05), rgba($accent-purple, 0.05));
+          border: 1px solid rgba($primary-blue, 0.1);
+          border-radius: 16px;
+          padding: 32px;
+          text-align: center;
+
+          .thesis-header {
+            margin-bottom: 24px;
+
+            .award-badge {
+              display: inline-flex;
+              align-items: center;
+              gap: 8px;
+              padding: 8px 16px;
+              background: rgba($primary-blue, 0.1);
+              border-radius: 20px;
+              margin-bottom: 16px;
+
+              .trophy {
+                font-size: 1.2rem;
+              }
+
+              .award-text {
+                color: $primary-blue;
+                font-weight: 600;
+                font-size: 0.875rem;
+              }
+            }
+
+            h3 {
+              font-size: 1.5rem;
+              color: $dark-text;
+              line-height: 1.4;
+              font-weight: 700;
+              max-width: 800px;
+              margin: 0 auto;
+            }
+          }
+
+          .award-details {
+            color: $light-text;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+} 

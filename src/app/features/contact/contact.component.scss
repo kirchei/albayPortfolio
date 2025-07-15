@@ -1,0 +1,341 @@
+@use '../../app.scss' as *;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+.contact {
+  @include section-container;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  
+  .contact-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    .section-intro {
+      text-align: center;
+      margin-bottom: 60px;
+
+      .section-tag {
+        @include section-tag;
+      }
+
+      h2 {
+        @include section-title;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        color: $light-text;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      position: relative;
+
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+      }
+
+      // Contact Form
+      .contact-form {
+        background: $white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        animation: fadeInUp 0.6s ease-out;
+
+        @media (max-width: 576px) {
+          padding: 2rem;
+        }
+
+        .form-header {
+          margin-bottom: 2.5rem;
+
+          h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            @include gradient-text;
+          }
+
+          p {
+            color: $light-text;
+            line-height: 1.6;
+          }
+        }
+
+        .form-body {
+          .form-group {
+            margin-bottom: 1.5rem;
+
+            label {
+              display: block;
+              font-weight: 600;
+              margin-bottom: 0.5rem;
+              color: $dark-text;
+            }
+
+            .input-wrapper {
+              position: relative;
+
+              input,
+              textarea {
+                width: 95%;
+                padding: 1rem;
+                border: 2px solid $background-dark;
+                border-radius: 12px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                background: $background-light;
+
+                &::placeholder {
+                  color: $light-text;
+                  opacity: 0.7;
+                }
+
+                &:focus {
+                  outline: none;
+                  border-color: $primary-blue;
+                  background: $white;
+                  box-shadow: 0 0 0 4px rgba($primary-blue, 0.1);
+                }
+
+                &.error {
+                  border-color: $accent-pink;
+                  background: rgba($accent-pink, 0.05);
+                }
+              }
+
+              textarea {
+                min-height: 150px;
+                resize: vertical;
+              }
+
+              .error-message {
+                color: $accent-pink;
+                font-size: 0.875rem;
+                margin-top: 0.5rem;
+                display: flex;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(-10px);
+                animation: fadeInDown 0.3s ease forwards;
+              }
+            }
+          }
+
+          .submit-button {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, $primary-blue, $accent-purple);
+            color: $white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(135deg, $accent-purple, $primary-blue);
+              opacity: 0;
+              transition: opacity 0.3s ease;
+            }
+
+            span {
+              position: relative;
+              z-index: 1;
+            }
+
+            fa-icon {
+              position: relative;
+              z-index: 1;
+              font-size: 1rem;
+            }
+
+            &:hover:not(:disabled) {
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba($primary-blue, 0.2);
+
+              &::before {
+                opacity: 1;
+              }
+            }
+
+            &:disabled {
+              opacity: 0.7;
+              cursor: not-allowed;
+              transform: none;
+            }
+          }
+        }
+      }
+
+      // Contact Info
+      .contact-info {
+        display: grid;
+        grid-template-rows: repeat(3, auto) 1fr;
+        gap: 1.5rem;
+        height: fit-content;
+
+        @media (max-width: 992px) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto auto;
+          gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+
+        .info-card {
+          background: $white;
+          padding: 1.5rem;
+          border-radius: 16px;
+          text-align: center;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+          transition: all 0.3s ease;
+          animation: fadeInRight 0.6s ease-out;
+
+          @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+              animation-delay: #{$i * 0.1}s;
+            }
+          }
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+          }
+
+          .icon {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: $accent-purple;
+          }
+
+          h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: $dark-text;
+          }
+
+          p, a {
+            color: $light-text;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+
+            &:hover {
+              @include gradient-text;
+            }
+          }
+        }
+
+        .social-links {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-top: auto;
+          animation: fadeInUp 0.6s ease-out;
+          animation-delay: 0.4s;
+
+          @media (max-width: 992px) {
+            grid-column: 1 / -1;
+            margin-top: 1rem;
+          }
+
+          .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: $white;
+            border-radius: 12px;
+            color: $dark-text;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            &.github:hover {
+              background: #24292e;
+              color: $white;
+            }
+
+            &.linkedin:hover {
+              background: #0077b5;
+              color: $white;
+            }
+
+            fa-icon {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 

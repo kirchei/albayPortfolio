@@ -142,7 +142,7 @@ export const portfolioData = {
       ],
       githubUrl: '',
       liveUrl: 'https://youtu.be/_OFip5cJN78?si=qkOa1vh-V-OcLi3Z',
-      imageUrl: '/assets/images/projects/green-metrics.png'
+      imageUrl: '/assets/images/green-metrics.png'
     },
     {
       title: 'EV Charging Station Locator',
@@ -156,7 +156,7 @@ export const portfolioData = {
       ],
       githubUrl: 'https://github.com/ihjayyyy/Lightning',
       liveUrl: '',
-      imageUrl: '/assets/images/projects/ev-locator.png'
+      imageUrl: '/assets/images/ev-locator.png'
     },
     {
       title: 'Travel And Tours Website',
@@ -170,7 +170,7 @@ export const portfolioData = {
       ],
       githubUrl: 'https://github.com/kirchei/S08_Activity',
       liveUrl: 'https://kirchei.github.io/S08_Activity/',
-      imageUrl: '/assets/images/projects/travel-site.png'
+      imageUrl: '/assets/images/travel-site.png'
     },
     {
       title: 'Portfolio Website',
@@ -184,7 +184,7 @@ export const portfolioData = {
       ],
       githubUrl: 'https://github.com/kirchei/albayPortfolio',
       liveUrl: 'https://kirchei.github.io/albayPortfolio/',
-      imageUrl: '/assets/images/projects/portfolio.png'
+      imageUrl: '/assets/images/portfolio.png'
     },
     {
       title: 'Simple Calculator',
@@ -197,7 +197,7 @@ export const portfolioData = {
       ],
       githubUrl: 'https://github.com/kirchei/myCalculator',
       liveUrl: 'https://kirchei.github.io/myCalculator/',
-      imageUrl: '/assets/images/projects/calculator.png'
+      imageUrl: '/assets/images/calculator.png'
     },
     {
       title: 'Weather App',
@@ -210,7 +210,7 @@ export const portfolioData = {
       ],
       githubUrl: 'https://github.com/kirchei/myWeatherApp',
       liveUrl: 'https://kirchei.github.io/myWeatherApp/',
-      imageUrl: '/assets/images/projects/weather-app.png'
+      imageUrl: '/assets/images/weather-app.png'
     },
     {
       title: 'To-Do List',
@@ -223,7 +223,7 @@ export const portfolioData = {
       ],
       githubUrl: 'https://github.com/kirchei/todo-list',
       liveUrl: 'https://kirchei.github.io/myToDoList/',
-      imageUrl: '/assets/images/projects/todo-list.png'
+      imageUrl: '/assets/images/todo-list.png'
     }
   ]
 }; 
